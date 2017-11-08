@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"/>
+<head>
+	<title>task_6</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			margin: 0 auto;
+			width: 892px;
+			height: 1386px;
+			font-family: "微软雅黑";
+			font-size: 12px;
+		}
+		header{
+			margin: 0 auto;
+			height: 61px;
+			border-bottom: 2px solid #938e8c;
+			position: relative;
+		}
+		header div{
+			width: 110px;
+			height: 61px;
+			background-color: #d55d5c;
+		}
+		header p{
+			position: absolute;
+			font-family: "黑体";
+			right: 0;
+			bottom: 3px;
+			color: #d45d5c;
+		}
+		header div p{
+			left: 3px;
+			bottom: 3px;
+			color: #ffffff;
+		}
+
+		#one{
+			margin: 35px auto 0;
+			height: 301px;
+			position: relative;
+		}
+		#one .aside{
+			width: 203px;
+			border-top: 2px solid #cc8091;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		#one .aside .h{
+			width: auto;
+			font-size: 24px;
+			text-decoration: underline;
+		}
+		#one .aside .h span{
+			font-size: 33px;
+			line-height: 40px;
+		}
+		#one .aside .KT{
+			color: #676767;
+			font-family: "楷体";
+			line-height: 10px;
+		}
+		#one .aside .num{
+			font-size: 100px;
+			color: #75b86b;
+			font-style: italic;
+		}
+		#one .aside>div{
+			position: relative;
+		}
+		#one .aside .mark_1{
+			font-size: 55px;
+			color: #cc8091;
+		}
+		#one .aside .mark_2{
+			font-size: 21px;
+			color: #cc8091;
+			position: absolute;
+			bottom: 20px;
+			left: 90px;
+		}
+		#one .aside .mark_3{
+			color: #cc8091;
+			position: absolute;
+			bottom: 10px;
+			left: 90px;
+		}
+
+		#two{
+			margin: 40px auto 0;
+			overflow: auto;
+		}
+		#two .what,.when,.how,.w_3{
+			float: left;
+			width: 230px;
+			margin-right: 25px;
+			margin-bottom: 20px;
+			line-height: 16px;
+		}
+		#two .w_3{
+			margin-left: 5px;
+		}
+		#two .how p{
+			line-height: 20px;
+			opacity: 0.7;
+		}
+		#two .w_3 p{
+			color: #231815;
+			opacity: 0.7;
+			line-height: 16px;
+		}
+		#two .w_3 p span{
+			color: #cd4a48;
+			font-style: italic;
+		}
+		#two h3{
+			font-size: 16px;
+			text-decoration: underline;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		#two .what p{
+			font-family: "宋体";
+			color: #767777;
+		}
+		#two .when p{
+			color: #231815;
+			opacity: 0.7;
+		}
+		#two .what h3{
+			color: #418c59;
+		}
+		#two .when h3{
+			color: #d2994f;
+		}
+		#two .how h3{
+			color: #cc7680;
+		}
+
+		#three{
+			margin: 40px auto 0;
+			overflow: auto;
+		}
+		#three .left{
+			width: 415px;
+			float: left;
+		}
+		#three .left h1{
+			font-size: 42px;
+			color: #11456b;
+			font-family: "黑体";
+			font-weight: bold;
+			line-height: 40px;
+		}
+		#three .left h1 span{
+			font-size: 72px;
+			color: #f5e327;
+			font-weight: bold;
+			font-style: italic;
+		}
+		#three .left h2{
+			font-size: 33px;
+			color: #11456b;
+			font-family: "黑体";
+			font-weight: bold;
+			margin-top: 8px;
+		}
+		#three .left hr{
+			margin-top: 8px;
+			margin-bottom: 25px;
+			border: 2px #11456b solid;
+		}
+		#three .left p{
+			color: #767777;
+			font-family: "宋体";
+		}
+		#three .left .par{
+			text-indent: 2em;
+		}
+		#three .left p span{
+			font-size: 70px;
+			color: #f5e327;
+			float: left;
+			margin: 0 5px;
+		}
+		#three .left img{
+			float: right;
+			margin: 15px;
+		}
+		#three .right{
+			width: 458px;
+			float: right;
+		}
+		#three .right .up{
+			position: relative;
+		}
+		#three .right .up img{
+			width: 458px;
+			height: 275px;
+		}
+		#three .right .up .mark1{
+			width: 458px;
+			height: 61px;
+			position: absolute;
+			bottom: 3px;
+			background-color:rgba(0,0,0,0.3);
+		}
+		#three .right .up .mark1 p{
+			position: absolute;
+			bottom: 10px;
+			height: 40px;
+			margin-left: 35px;
+			padding-left: 20px;
+			border-left: 3px solid #72b16a;
+			color: #72b16a;
+			font-style: italic;
+			letter-spacing: 140%;
+		}
+		#three .right .up .mark1 p span{
+			font-size: 26px;
+			color: #ffffff;
+			font-style: normal;
+		}
+		#three .right .down{
+			background-color: #eeedd6;
+			margin-top: 30px;
+			padding-top: 10px;
+			overflow: auto;
+		}
+		#three .right .down .triangle{
+			margin-top: 20px;
+			margin-left: 30px;
+			font-size: 16px;
+			color: #5a5b5b;
+			text-decoration: left;
+		}
+		#three .right .down .triangle:before{
+			content: url("triangle.png");
+			margin-right: 5px;
+		}
+		#three .right .down .triangle span{
+			font-size: 12px;
+			font-family: "宋体";
+			font-style: italic;
+			float: right;
+			margin-right: 20px;
+		}
+		#three .right .down .bottom_l{
+			height: 160px;
+			width: 260px;
+			background-color: #d45d5c;
+			margin-top: 36px;
+			color: #ffffff;
+		}
+		#three .right .down .bottom_l span{
+			font-size: 110px;
+			float: left;
+			margin: 5px 3px 0 5px;
+		}
+		#three .right .down .bottom_l div{
+			float: left;
+			border-left: 2px solid #ffffff;
+			height:86px;
+			margin-top: 35px;
+			padding-left: 10px;
+			font-family: "黑体";
+		}
+		#three .right .down .bottom_l div .mark_one{
+			font-size: 21px;
+			font-style: italic;
+			line-height: 24px;
+		}
+		#three .right .down .bottom_l div .mark_two{
+			line-height: 13px;
+		}
+		#three .right .down .bottom_r{
+			float: right;
+			width: 175px;
+			margin-top: 30px;
+			margin-right: 8px;
+			font-family: "黑体";
+		}
+		#three .right .down .bottom_r .mark_one{
+			float: left;
+			font-size: 72px;
+			color: #d45d5c;
+		}
+		#three .right .down .bottom_r .mark_two{
+			float: right;
+			font-size: 72px;
+			color: #d45d5c;
+		}
+		footer{
+			margin-top: 20px;
+			width: 892px;
+			height: 59px;
+			border-top: 1px solid #938e8c;
+		}
+		footer p{
+			float: right;
+			color: #d45d5c;
+			font-family: "黑体";
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<header>
+			<div>
+				<p>东莞口腔医院</p>
+			</div>
+			<p>2016.11</p>
+		</header>
+		<section id="one">
+			<div>
+				<img src="http://www.dgkqyy.cn/uploads/imgaes/2017/03/07/1488856323_bimg.jpg" width="630" height="301">
+			</div>
+			<div class="aside">
+				<p class="h"><span>A</span>BOUT</p>
+				<p class="h"><span>T</span>ECHNOLOGE</p>
+				<p class="KT">About 东莞口腔医院</p>
+				<p class="num">700</p>
+				<div>
+					<p class="mark_1">3.2</p>
+					<p class="mark_2">css</p>
+					<p class="mark_3">cssssscsssscss</p>
+				</div>
+			</div>
+		</section>
+		<section id="two">
+			<div class="what">
+				<h3>what</h3>
+				<p>医院一直坚持"以齿为业，精于齿道"的品牌理念，不仅以行医者之大道为己任，凭借德国高端设备、引进知名医生坐诊，高质量的服务理念，使牙科治疗服务真正进入个性化、定制化和快速反应的新纪元。医院一直坚持"以齿为业，精于齿道"的品牌理念，不仅以行医者之大道为己任，凭借德国高端设备、引进知名医生坐诊，高质量的服务理念，使牙科治疗服务真正进入个性化、定制化和快速反应的新纪元。</p>
+			</div>
+			<div class="when">
+				<h3>when</h3>
+				<p>医院一直坚持"以齿为业，精于齿道"的品牌理念，不仅以行医者之大道为己任，凭借德国高端设备、引进知名医生坐诊，高质量的服务理念，使牙科治疗服务真正进入个性化、定制化和快速反应的新纪元。</p>
+			</div>
+			<div class="how">
+				<h3>how</h3>
+				<p>以齿为业，精于齿道</p>
+				<p>以齿为业，精于齿道</p>
+				<p>坚持</p>
+			</div>
+			<div class="w_3">
+				<p>
+					What------- <span>40%</span>
+				</p>
+				<p>
+					What------- <span>30%</span>
+				</p>
+				<p>
+					What------- <span>30%</span>
+				</p>
+			</div>
+		</section>
+		<section id="three">
+			<div class="left">
+				<h1>
+					<span>THE</span> TECHNOLOGE
+					<br>
+					OF HOSPITAL
+				</h1>
+				<h2>医院技术领域</h2>
+				<hr>
+				<p><span>医</span>古语云：不忘初心，方得始终。东莞口腔医院的成立，是东莞人民的福祉，更是全体医护人员身上的历史使命及新时代的责任。东莞口腔医院肩负着推动东莞口<img src="http://www.dgkqyy.cn/uploads/imgaes/2017/03/09/1489051506_banner_img.jpg" height="288" width="167">古语云：不忘初心，方得始终。东莞口腔医院的成立，是东莞人民的福祉，更是全体医护人员身上的历史使命及新时代的责任。东莞口腔医院肩负着推动东莞口古语云：不忘初心，方得始终。东莞口腔医院的成立，是东莞人民的福祉</p>
+				<p class="par">古语云：不忘初心，方得始终。东莞口腔医院的成立，是东莞人民的福祉，更是全体医护人员身上的历史使命及新时代的责任。东莞口腔医院肩负着推动东莞口腔行业质量标准升级完善以及国际学术交流的重任，我们以科学严谨的医道坚守与充满人文关怀的服务精神对待每一次口腔诊疗，秉持“崇医尚德，全心服务；以齿为业，精于齿道”的从医理念，最终成为技术领先、服务领先、设备领先、创新领先的中国知名口腔医院品牌</p>
+				<p class="par">古语云：不忘初心，方得始终。东莞口腔医院的成立，是东莞人民的福祉，更是全体医护人员身上的历史使命及新时代的责任。东莞口腔医院肩负着推动东莞口腔行业质量标准升级完善以及国际学术交流的重任，我们以科学严谨的医道坚守与充满人文关怀的服务精神对待每一次口腔诊疗，秉持“崇医尚德，全心服务；以齿为业，精于齿道”的从医理念，最终成为技术领先、服务领先、设备领先、创新领先的中国知名口腔医院品牌</p>
+			</div>
+			<div class="right">
+				<div class="up">
+					<img src="http://www.dgkqyy.cn/uploads/imgaes/2017/03/07/1488856249_bimg.jpg" height="275" width="458">
+					<div class="mark1">
+						<p><span>医院技术</span>&nbsp;&nbsp;医院技术领域技术</p>
+					</div>
+				</div>
+				<div class="down">
+					<p class="triangle">东莞市南城街道雅园工业区路33号．．．．．．．．<span>地址</span></p>
+					<p class="triangle"> 版权所有 站长统计．．．．．．．．．．．．．．<span>版权</span></p>
+					<p class="triangle">东莞市南城街道雅园工业区路33号．．．．．．．．<span>版权</span></p>
+					<div class="bottom_r">
+						<p><span class="mark_one">“</span>world hello world
+						hello world hello world
+						hello world hello world
+						hello world hello world
+						hello world hello world
+						hello world<span class="mark_two">”</span></p>
+					</div>
+					<div class="bottom_l">
+						<span>0</span>
+						<div>
+							<p class="mark_one">ONE TWO <br> THREE FOUR FIVE</p>
+							<p class="mark_two">hello world hello world <br> hello world</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>东莞口腔医院</p>
+		</footer>
+	</div>
+</body>
+</html>
